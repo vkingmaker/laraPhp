@@ -1,9 +1,7 @@
 <?php
 
-$query = require 'bootstrap.php';
+$query = require 'core/bootstrap.php';
 
-require 'papers.php';
-
-$task = $query->selectAllPapers('paper');
-
-require 'index.view.php';
+// die(var_dump($app));
+require Router::load('routes.php')
+->direct(Request::uri());

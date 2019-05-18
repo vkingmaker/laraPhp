@@ -13,6 +13,6 @@ class QueryBuilder{
     
         $statement->execute();
         
-        return $statement->fetchAll(PDO::FETCH_CLASS, 'Papers');
+        return $statement->fetchAll(PDO::FETCH_CLASS);
     }
 }
